@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        :root {
+            --primary-color: #0080ff;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 2rem;
+        }
+        
+        .form-cadastro {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+        }
+
+        .form-cadastro h2 {
+            font-family: poppins;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+            font-family: poppins;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-top: 0.7rem;
+              text-align: center; /* Esta é a propriedade principal para centralizar */
+            text-transform: uppercase; /* Deixa o texto em maiúsculas */
+            letter-spacing: 1px; /* Espaçamento entre letras */
+            
+        }
+        
+        
+        input, select {
+            text-align: center; /* Centraliza o texto digitado */
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--light-color);
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background-color: #ffffff;
+            color: var(--secondary-color);
+            font-family: poppins;
+        }
+
+        input:focus, select:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+            background-color: white;
+        }
+        
+        button[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 0.5rem;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #3aa5ec;
+            transform: translateY(-2px);
+        }
+        
+        button[type="submit"]:active {
+            transform: translateY(0);
+        }
+        
+        .forgot-link {
+            display: block;
+            text-align: right;
+            margin-top: 1rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        
+        .forgot-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .form-cadastro {
+                padding: 1.5rem;
+            }
+        }

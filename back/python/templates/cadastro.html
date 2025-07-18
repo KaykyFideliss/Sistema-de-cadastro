@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='app/style.css') }}">
+
+    <title>CADASTRO CURSOS</title>
+</head>
+<body>
+    
+ 
+    <div class="container">
+    <form id="formAluno" class="form-cadastro">
+        
+        <h2>CADASTRO</h2>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="idade">Idade</label>
+        <input type="number" name="idade" id="idade" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="curso_id">Cursos</label>
+        <select name="curso_id" id="curso_id" required>
+            <option value="" disabled selected>Selecione um curso</option>
+            <option value="1" >Gestão de TI</option>
+            <option value="2">Desenvolvimento de Sistemas</option>
+        </select>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</div>
+
+    <script>
+   document.getElementById('formAluno').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Captura os dados do formulário
+            const aluno = {
+                nome: document.getElementById('nome').value,
+                idade: document.getElementById('idade').value,
+                email: document.getElementById('email').value,
+                curso_id: document.getElementById('curso_id').value
+            };
+
+            // Envia para o Flask
+            try {
+                const response = await fetch('http://localhost:5000/cadastrar', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(aluno)
+                });
+                const result = await response.json();
+                alert(result.mensagem || result.erro); // Mostra resposta do Flask
+            } catch (error) {
+                alert("Erro ao conectar com o servidor.");
+            }
+        });
+    </script>
+</body>
+</html>
