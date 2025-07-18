@@ -24,10 +24,10 @@ Desenvolver um sistema acadêmico para cadastro e gestão de alunos utilizando m
 
 
 ---
-## 📥 Download do Relatório Power BI
+## 📥 Download do Dashboard Power BI
 
-Você pode baixar o arquivo `.pbix` clicando no link abaixo:
+Você pode baixar o relatório `.pbix` e abrir no Power BI Desktop:
 
-🔗 [Download do Dashboard Power BI](./powerbi/dashboard_final.pbix)
+🔗 [Download do Dashboard Power BI](./dashboard_final.pbix)
 
-> Abra o arquivo no Power BI Desktop para visualizar e editar.
+> Este relatório apresenta visualizações de dados como número de alunos por curso e datas de matrícula.
