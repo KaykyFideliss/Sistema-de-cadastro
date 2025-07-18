@@ -15,6 +15,18 @@ Desenvolver um sistema acadêmico para cadastro e gestão de alunos utilizando m
 
 ---
 
+## 🚀 Metodologia Ágil
+
+Este projeto foi desenvolvido utilizando Scrum e Kanban:
+
+- 📌 Organização por Sprints (ciclos de 1 a 2 semanas)
+- 👥 Papéis definidos: Scrum Master, Product Owner, Dev Team
+- 🗓️ Reuniões diárias (Daily Scrum)
+- ✅ Entregas incrementais (back-end, front-end, Power BI)
+
+
+---
+
 ## 🛠️ Tecnologias Utilizadas
 - Python + Flask (API)
 - MySQL (Banco de Dados)
